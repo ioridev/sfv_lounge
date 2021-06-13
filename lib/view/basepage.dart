@@ -38,25 +38,19 @@ class _BasePageState extends State<BasePage> {
             icon: Icon(
               IconData(59621, fontFamily: 'MaterialIcons'),
             ),
-            title: const Text(
-              '#募集を見る',
-            ),
+            label: '#募集を見る',
           ),
           const BottomNavigationBarItem(
             icon: Icon(
               IconData(59621, fontFamily: 'MaterialIcons'),
             ),
-            title: Text(
-              '募集する',
-            ),
+            label: '募集する',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               IconData(59621, fontFamily: 'MaterialIcons'),
             ),
-            title: const Text(
-              'データ',
-            ),
+            label: 'データ',
           ),
         ],
       ),
