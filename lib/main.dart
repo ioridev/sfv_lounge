@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 void main() {
   runApp(MyApp());
@@ -7,10 +8,17 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return NeumorphicApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      theme: NeumorphicThemeData(
+        baseColor: Color(0xFFFFFFFF),
+        lightSource: LightSource.topLeft,
+        depth: 10,
+      ),
+      darkTheme: NeumorphicThemeData(
+        baseColor: Color(0xFF3E3E3E),
+        lightSource: LightSource.topLeft,
+        depth: 6,
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -27,19 +35,15 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
   void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
+    setState(() {});
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
+      appBar: NeumorphicAppBar(
+        title: Text("a"),
       ),
       body: Center(
         child: Column(
@@ -48,10 +52,9 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               'You have pushed the button this many times:',
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
+            NeumorphicButton(
+              child: Text('ツイート'),
+            )
           ],
         ),
       ),
