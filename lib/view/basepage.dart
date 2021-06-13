@@ -23,19 +23,6 @@ class _BasePageState extends State<BasePage> {
           _buildOffstage(2, DataPage()),
         ],
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState(() {
-            _index = 1;
-          });
-        },
-        child: Icon(
-          Icons.trending_up,
-          color: Colors.black,
-        ),
-        elevation: 0,
-      ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         onTap: (int index) {
